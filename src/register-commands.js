@@ -7,6 +7,10 @@ const commands = [
     description: "Replies with Greet!",
   },
   {
+    name: "help",
+    description: "Help command",
+  },
+  {
     name: "oeis",
     description: "Returns the oeis sequence.",
     options: [
@@ -14,6 +18,18 @@ const commands = [
         name: "number",
         description: "The number to return",
         type: ApplicationCommandOptionType.String,
+        required: true,
+      },
+    ],
+  },
+  {
+    name: "prime",
+    description: "Finds the nth-prime number",
+    options: [
+      {
+        name: "nth-prime",
+        description: "The nth-prime number",
+        type: ApplicationCommandOptionType.Integer,
         required: true,
       },
     ],
