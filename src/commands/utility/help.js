@@ -1,16 +1,23 @@
-const { SlashCommandBuilder } = require("discord.js");
+const { SlashCommandBuilder, Client, Embed } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
+require("dotenv").config();
 
-module.exports = {
+https: module.exports = {
   data: new SlashCommandBuilder()
     .setName("help")
     .setDescription("Opens up the help channel."),
   async execute(interaction) {
     const embedhelp = new EmbedBuilder()
-      .setTitle("Help")
-      .setDescription("This is the help channel")
+      .setAuthor({
+        name: "CyberDeltoid Help",
+        iconURL: "https://i.postimg.cc/pVzkTZR1/edited.png",
+      })
+      .setDescription("This is the help channel.")
       .setColor(0x97e6ef)
-      .addFields({ name: "Field title", value: "Random BS Go" });
-    interaction.reply({ embeds: [embedhelp] });
+      .addFields({ name: "/nth-prime", value: "Returns the nth prime number." })
+      .addFields({ name: "/oeis", value: "Returns the OEIS sequence." })
+      .addFields({ name: "/ping", value: " ( ͡° ͜ʖ ͡°)" })
+      .addFields({ name: "/help", value: "Shows this command list." });
+    await interaction.reply({ embeds: [embedhelp] });
   },
 };

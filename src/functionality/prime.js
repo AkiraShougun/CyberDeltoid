@@ -1,5 +1,5 @@
-export function nthPrime(n) {
-  let limit = 225000;
+module.exports = function nthPrime(n) {
+  let limit = 10000000;
   let primes = [];
   let sieve = new Array(limit).fill(true);
   sieve[0] = sieve[1] = false;
@@ -14,4 +14,4 @@ export function nthPrime(n) {
   }
 
   return primes[n - 1];
-}
+};
