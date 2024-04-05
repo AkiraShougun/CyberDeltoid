@@ -17,7 +17,8 @@ https: module.exports = {
       .addFields({ name: "/nth-prime", value: "Returns the nth prime number." })
       .addFields({ name: "/oeis", value: "Returns the OEIS sequence." })
       .addFields({ name: "/ping", value: " ( ͡° ͜ʖ ͡°)" })
-      .addFields({ name: "/help", value: "Shows this command list." });
+      .addFields({ name: "/help", value: "Shows this command list." })
+      .addFields({ name: "/cat", value: "Sends cute cats." });
     await interaction.reply({ embeds: [embedhelp] });
   },
 };

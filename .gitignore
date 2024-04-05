@@ -1,6 +1,6 @@
 .env
 package.json
 node_modules
-reigster-commands.js
+register-commands.js
 alternative.js
 test

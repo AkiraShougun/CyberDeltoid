@@ -11,7 +11,7 @@ module.exports = {
         .setDescription("Returns the nth prime number")
         .setRequired(true);
     })
-    .setDescription("Display oeis info."),
+    .setDescription("Returns the nth prime number"),
   async execute(interaction) {
     const nth_prime = interaction.options.get("nth-prime").value;
     await interaction.reply(
