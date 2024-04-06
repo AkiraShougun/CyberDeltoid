@@ -18,7 +18,15 @@ https: module.exports = {
       .addFields({ name: "/oeis", value: "Returns the OEIS sequence." })
       .addFields({ name: "/ping", value: " ( ͡° ͜ʖ ͡°)" })
       .addFields({ name: "/help", value: "Shows this command list." })
-      .addFields({ name: "/cat", value: "Sends cute cats." });
+      .addFields({ name: "/cat", value: "Sends cute cats." })
+      .addFields({
+        name: "/helltaker",
+        value: "Returns random helltaker images from pixiv.",
+      })
+      .addFields({
+        name: "/pfp",
+        value: "Displays the profile picture of a user.",
+      });
     await interaction.reply({ embeds: [embedhelp] });
   },
 };
