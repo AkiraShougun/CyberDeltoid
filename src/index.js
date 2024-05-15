@@ -58,7 +58,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+  client.user.setPresence({ activities: [{ name: "with demons" }] });
 });
+
 // Log in to Discord with your client's token
 
 client.login(process.env.TOKEN);

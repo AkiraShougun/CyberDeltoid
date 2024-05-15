@@ -20,7 +20,7 @@ module.exports = {
     const tag = interaction.options.get("tags").value;
     try {
       const req = await request(
-        `https://www.zerochan.net/${tag}?p=${rand(50)}&l=15&json`
+        `https://www.zerochan.net/${tag}?p=1&l=500&json`
       );
       const waifu = await req.body.json();
       const randomEntry = rand(waifu.items.length);
@@ -38,9 +38,9 @@ module.exports = {
           text: "CyberDeltoid",
           iconURL: "https://i.postimg.cc/pVzkTZR1/edited.png",
         });
-      interaction.reply({ embeds: [embed] });
-    } catch {
-      interaction.reply("No results. The entered tag does not exist.");
+      await interaction.reply({ embeds: [embed] });
+    } catch (err) {
+      await interaction.reply("No result found.");
     }
   },
 };

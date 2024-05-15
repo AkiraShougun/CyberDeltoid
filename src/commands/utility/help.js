@@ -19,6 +19,7 @@ https: module.exports = {
       .addFields({ name: "/ping", value: " ( ͡° ͜ʖ ͡°)" })
       .addFields({ name: "/help", value: "Shows this command list." })
       .addFields({ name: "/cat", value: "Sends cute cats." })
+      .addFields({ name: "/waifu", value: "Returns a random waifu." })
       .addFields({
         name: "/helltaker",
         value: "Returns random helltaker images from pixiv.",
